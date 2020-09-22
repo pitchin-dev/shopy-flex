@@ -386,6 +386,8 @@ body {
     margin-top: 0; }
 
 @media screen and (max-width: 1092px) {
+  body {
+    width: 100vw; }
   .section__header {
     font-size: 30px; }
   .header__menu {
