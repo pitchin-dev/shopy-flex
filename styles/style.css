@@ -46,6 +46,8 @@ body {
     margin-left: 20px;
     cursor: pointer;
     transition: all .2s linear; }
+    .header__contacts__social svg:first-child {
+      margin-left: 0; }
     .header__contacts__social svg:hover {
       color: #ff5912; }
 
@@ -68,12 +70,46 @@ body {
       .header__menu__list__item__link:hover {
         color: #ff5912; }
 
-.header__icons svg {
-  margin-left: 17px;
-  cursor: pointer;
-  transition: all .2s linear; }
-  .header__icons svg:hover {
-    color: #ff5912; }
+.header__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .header__icons svg {
+    margin-left: 17px;
+    cursor: pointer;
+    transition: all .2s linear; }
+    .header__icons svg:hover {
+      color: #ff5912; }
+
+.header__burger {
+  height: 32px;
+  width: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  cursor: pointer; }
+  .header__burger__line {
+    width: 30px;
+    height: 4px;
+    background-color: #ff5912;
+    position: relative; }
+    .header__burger__line:before {
+      content: '';
+      width: 30px;
+      height: 4px;
+      background-color: #ff5912;
+      display: block;
+      position: absolute;
+      top: -10px; }
+    .header__burger__line:after {
+      content: '';
+      width: 30px;
+      height: 4px;
+      background-color: #ff5912;
+      display: block;
+      position: absolute;
+      bottom: -10px; }
 
 .main {
   background-color: #f4f6f8;
@@ -179,7 +215,7 @@ body {
   .adv__sale {
     width: 100%;
     max-width: 670px;
-    height: 100px;
+    min-height: 100px;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
@@ -348,3 +384,57 @@ body {
           color: #ff5912; }
   .footer__payments__header {
     margin-top: 0; }
+
+@media screen and (max-width: 1092px) {
+  .section__header {
+    font-size: 30px; }
+  .header__menu {
+    display: none; }
+  .header__burger {
+    display: flex; }
+  .header__contacts {
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 30px; }
+    .header__contacts__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center; }
+    .header__contacts__social {
+      margin: 20px 0; }
+  .carousel__item__header {
+    font-size: 30px; }
+  .new__items {
+    flex-wrap: wrap; }
+    .new__items__item {
+      margin-bottom: 30px;
+      margin-right: 0; }
+  .adv__inner {
+    flex-direction: column; }
+  .adv__sale {
+    flex-direction: column; }
+    .adv__sale__icon {
+      display: none; }
+  .sales__items {
+    flex-direction: column;
+    justify-content: start; }
+    .sales__items__item {
+      margin-bottom: 30px; }
+  .contact__inner {
+    flex-direction: column; }
+  .contact__text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .contact__text__header {
+      text-align: center; }
+    .contact__text__paragraph {
+      text-align: center; }
+  .contact__inputs {
+    flex-direction: column; }
+    .contact__inputs svg {
+      top: 17px; }
+    .contact__inputs__btn {
+      margin-left: 0;
+      margin-top: 30px; } }
