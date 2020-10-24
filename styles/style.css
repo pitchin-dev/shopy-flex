@@ -280,7 +280,8 @@ body {
   position: absolute;
   top: 17px;
   transform: rotate(45deg);
-  z-index: 2; }
+  z-index: 2;
+  animation: flipTop 5s linear 3s infinite alternate-reverse; }
 
 .bottom__square {
   width: 55px;
@@ -289,7 +290,8 @@ body {
   position: absolute;
   top: 17px;
   transform: rotate(-45deg);
-  z-index: 1; }
+  z-index: 1;
+  animation: flipBottom 5s linear 3s infinite alternate-reverse; }
 
 .sales {
   margin-bottom: 80px; }
@@ -559,3 +561,19 @@ body {
     .catalog__items__item {
       margin-bottom: 30px;
       margin-right: 0; } }
+
+@keyframes flipTop {
+  0% {
+    transform: rotate(-45deg); }
+  20% {
+    transform: rotate(45deg); }
+  100% {
+    transform: rotate(45deg); } }
+
+@keyframes flipBottom {
+  0% {
+    transform: rotate(45deg); }
+  20% {
+    transform: rotate(-45deg); }
+  100% {
+    transform: rotate(-45deg); } }
