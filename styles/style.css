@@ -129,9 +129,7 @@ body {
     justify-content: center;
     margin-right: 80px; }
     .carousel__dots-mobile {
-      display: none;
-      transform: rotate(-90deg);
-      margin-right: 0; }
+      display: none; }
   .carousel__dot {
     display: block;
     width: 11px;
@@ -143,10 +141,12 @@ body {
       height: 37px;
       background-color: #ff5912; }
   .carousel__item {
-    min-height: 650px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
+    display: none;
+    min-height: 650px; }
+    .carousel__item.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
     .carousel__item__header {
       color: #ff5912;
       text-transform: uppercase;
@@ -163,6 +163,7 @@ body {
       width: 140px;
       height: 30px;
       margin-left: 20px;
+      padding: 5px;
       border: none;
       cursor: pointer;
       color: #ff5912;
@@ -508,8 +509,6 @@ body {
       text-align: center; }
   .carousel__dots {
     display: none; }
-    .carousel__dots-mobile {
-      display: block; }
   .new__items {
     flex-wrap: wrap; }
     .new__items__item {
@@ -525,6 +524,8 @@ body {
       text-align: center; }
     .adv__sale__icon {
       display: none; }
+  .adv__banner {
+    max-width: 100%; }
   .sales__items {
     flex-direction: column;
     justify-content: start; }
